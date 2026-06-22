@@ -54,3 +54,75 @@
 .icon-btn {
   padding: 0;
 }
+
+.navbar-menu-wrapper {
+  position: relative;
+}
+
+.navbar-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 250px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.navbar-dropdown-header {
+  padding: 1rem;
+  background: var(--light);
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.navbar-username {
+  font-weight: 600;
+  color: var(--dark);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.navbar-useremail {
+  color: var(--gray);
+  margin: 0.25rem 0 0 0;
+  font-size: 0.8rem;
+}
+
+.navbar-dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s;
+  color: var(--dark);
+  font-size: 0.9rem;
+}
+
+.navbar-dropdown-item:hover {
+  background: var(--light);
+}
+
+.navbar-dropdown-item:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.navbar-dropdown-divider {
+  margin: 0;
+  border: none;
+  border-top: 1px solid var(--gray-light);
+}
+
+.navbar-dropdown-logout {
+  color: #d32f2f;
+}
+
+.navbar-dropdown-logout:hover {
+  background: #ffebee;
+}

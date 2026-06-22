@@ -1,11 +1,14 @@
 // User types
 export interface User {
-  id: string
+  uid: string
   email: string
   displayName: string
-  avatar?: string
+  photoURL: string
   bio?: string
   createdAt: Date
+  updatedAt: Date
+  role: 'user' | 'admin'
+  isActive: boolean
 }
 
 // Event types

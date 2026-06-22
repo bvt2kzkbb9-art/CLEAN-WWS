@@ -47,6 +47,16 @@ button {
   background: var(--primary-light);
 }
 
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-block {
+  width: 100%;
+  display: block;
+}
+
 .btn-secondary {
   background: white;
   color: var(--primary);
