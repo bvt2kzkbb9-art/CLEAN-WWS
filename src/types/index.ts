@@ -1,4 +1,7 @@
-// User types
+export * from './error.types'
+export * from './api.types'
+
+// Legacy types (to be refactored in future phases)
 export interface User {
   uid: string
   email: string
@@ -11,7 +14,6 @@ export interface User {
   isActive: boolean
 }
 
-// Event types
 export interface Event {
   id: string
   title: string
@@ -24,7 +26,6 @@ export interface Event {
   creator: string
 }
 
-// Post types
 export interface Post {
   id: string
   content: string
@@ -35,7 +36,6 @@ export interface Post {
   createdAt: Date
 }
 
-// Message types
 export interface Message {
   id: string
   senderId: string

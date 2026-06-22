@@ -1,5 +1,10 @@
-// Auth services
-export * from './auth'
+export { BaseService } from './base.service'
+export { authService, AuthService, type AuthUser } from './auth.service'
+export { userService, UserService } from './user.service'
+export { profileService, ProfileService } from './profile.service'
+export { eventService, EventService } from './event.service'
+export { postService, PostService } from './post.service'
+export { messageService, MessageService } from './message.service'
+export { notificationService, NotificationService } from './notification.service'
 
-// Firestore services
-export * from './firestore'
+export * from '@/models/firestore'
