@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { Event } from '@/types'
 import './EventCard.css'
 
@@ -9,7 +10,7 @@ interface EventCardProps {
   showActions?: boolean
 }
 
-export function EventCard({
+function EventCardComponent({
   event,
   onViewClick,
   onJoinClick,
@@ -65,3 +66,5 @@ export function EventCard({
     </div>
   )
 }
+
+export const EventCard = memo(EventCardComponent)
