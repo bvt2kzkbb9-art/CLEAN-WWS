@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useAuth } from '../context/AuthContext'
-import { useAuthForm } from '../hooks/useAuthForm'
+import { useAuth } from '@/context/AuthContext'
+import { useAuthForm } from '@/hooks/useAuthForm'
 import './Navbar.css'
 
 export function Navbar() {

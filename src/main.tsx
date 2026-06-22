@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom'
-import router from './router'
-import { AuthProvider } from './context/AuthContext'
-import { validateEnv } from './utils/env'
+import router from '@/router'
+import { AuthProvider } from '@/context/AuthContext'
+import { ErrorBoundary } from '@/components/ErrorBoundary'
+import { validateEnv } from '@/utils/env'
 import './index.css'
 
 // Validate environment variables before app starts
@@ -32,8 +33,10 @@ try {
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <AuthProvider>
-      <RouterProvider router={router} />
-    </AuthProvider>
+    <ErrorBoundary>
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
+    </ErrorBoundary>
   </React.StrictMode>,
 )

@@ -1,5 +1,5 @@
-import { EventCard } from '../components/EventCard'
-import { MOCK_EVENTS } from '../utils/mockData'
+import { EventCard } from '@/components/EventCard'
+import { MOCK_EVENTS } from '@/utils/mockData'
 
 export function Home() {
 

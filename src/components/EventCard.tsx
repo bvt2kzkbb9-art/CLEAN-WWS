@@ -1,4 +1,4 @@
-import { Event } from '../types'
+import { Event } from '@/types'
 import './EventCard.css'
 
 interface EventCardProps {

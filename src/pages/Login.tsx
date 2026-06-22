@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import { useAuthForm } from '../hooks/useAuthForm'
+import { useAuthForm } from '@/hooks/useAuthForm'
 import './Auth.css'
 
 export function Login() {

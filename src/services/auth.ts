@@ -8,8 +8,8 @@ import {
   browserLocalPersistence,
 } from 'firebase/auth'
 import { doc, setDoc, getDoc, serverTimestamp, Timestamp } from 'firebase/firestore'
-import { auth, db } from '../firebase/config'
-import { User } from '../types'
+import { auth, db } from '@/firebase/config'
+import { User } from '@/types'
 
 /**
  * Register user with email and password

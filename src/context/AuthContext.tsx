@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import { User as FirebaseUser } from 'firebase/auth'
-import { onAuthStateChange, enablePersistence, getUserDocument } from '../services/auth'
-import { User } from '../types'
+import { onAuthStateChange, enablePersistence, getUserDocument } from '@/services/auth'
+import { User } from '@/types'
 
 interface AuthContextType {
   // Firebase user

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { loginUser, registerUser, logoutUser } from '../services/auth'
+import { loginUser, registerUser, logoutUser } from '@/services/auth'
 
 interface UseAuthFormReturn {
   isLoading: boolean
