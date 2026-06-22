@@ -1,28 +1,22 @@
 import { createBrowserRouter } from 'react-router-dom'
-
-// Pages will be implemented in ETAP 4
-// Placeholder pages for routing structure
+import App from './App'
+import { Home } from './pages/Home'
+import { Events } from './pages/Events'
+import { Search } from './pages/Search'
+import { Profile } from './pages/Profile'
+import { Messages } from './pages/Messages'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div>Home Page</div>,
-  },
-  {
-    path: '/profile/:id',
-    element: <div>Profile Page</div>,
-  },
-  {
-    path: '/events',
-    element: <div>Events Page</div>,
-  },
-  {
-    path: '/search',
-    element: <div>Search Page</div>,
-  },
-  {
-    path: '/messages',
-    element: <div>Messages Page</div>,
+    element: <App />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: 'events', element: <Events /> },
+      { path: 'search', element: <Search /> },
+      { path: 'profile/:id', element: <Profile /> },
+      { path: 'messages', element: <Messages /> },
+    ],
   },
 ])
 
