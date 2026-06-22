@@ -1,1 +1,1 @@
-export { cloudinaryConfig, uploadImage } from './config'
+export { getCloudinaryConfig, uploadImage } from './config'

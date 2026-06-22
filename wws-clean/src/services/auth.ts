@@ -7,7 +7,7 @@ import {
   setPersistence,
   browserLocalPersistence,
 } from 'firebase/auth'
-import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore'
+import { doc, setDoc, getDoc, serverTimestamp, Timestamp } from 'firebase/firestore'
 import { auth, db } from '../firebase/config'
 import { User } from '../types'
 
@@ -109,7 +109,13 @@ export async function getUserDocument(uid: string): Promise<User | null> {
     if (!userDoc.exists()) {
       return null
     }
-    return userDoc.data() as User
+
+    const data = userDoc.data()
+    return {
+      ...data,
+      createdAt: data.createdAt instanceof Timestamp ? data.createdAt.toDate() : data.createdAt,
+      updatedAt: data.updatedAt instanceof Timestamp ? data.updatedAt.toDate() : data.updatedAt,
+    } as User
   } catch (error) {
     throw new Error(`Failed to get user: ${getErrorMessage(error)}`)
   }
