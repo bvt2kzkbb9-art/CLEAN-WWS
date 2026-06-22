@@ -3,13 +3,26 @@ import { getAuth } from 'firebase/auth'
 import { getFirestore } from 'firebase/firestore'
 import { getStorage } from 'firebase/storage'
 
+// Validate required environment variables
+function getEnvVar(key: string): string {
+  const value = import.meta.env[key]
+  if (!value) {
+    throw new Error(
+      `Missing required environment variable: ${key}\n` +
+      'Please ensure .env.local is configured with Firebase credentials.\n' +
+      'Copy .env.example to .env.local and fill in your Firebase project details.'
+    )
+  }
+  return value
+}
+
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || 'AIzaSyAYXNZpIPSfKFadra4acBTmr4QovjngGWc',
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || 'cleanwws.firebaseapp.com',
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || 'cleanwws',
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || 'cleanwws.firebasestorage.app',
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '607922965408',
-  appId: import.meta.env.VITE_FIREBASE_APP_ID || '1:607922965408:web:25292ff772e5b8c258b2c5',
+  apiKey: getEnvVar('VITE_FIREBASE_API_KEY'),
+  authDomain: getEnvVar('VITE_FIREBASE_AUTH_DOMAIN'),
+  projectId: getEnvVar('VITE_FIREBASE_PROJECT_ID'),
+  storageBucket: getEnvVar('VITE_FIREBASE_STORAGE_BUCKET'),
+  messagingSenderId: getEnvVar('VITE_FIREBASE_MESSAGING_SENDER_ID'),
+  appId: getEnvVar('VITE_FIREBASE_APP_ID'),
 }
 
 const app = initializeApp(firebaseConfig)
