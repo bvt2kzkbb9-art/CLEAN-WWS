@@ -74,14 +74,6 @@ export async function logoutUser(): Promise<void> {
 }
 
 /**
- * Get current user from Firebase Auth
- * Returns null if no user is logged in
- */
-export function getCurrentAuthUser(): FirebaseUser | null {
-  return auth.currentUser
-}
-
-/**
  * Subscribe to auth state changes
  * Callback is called whenever user logs in/out
  */

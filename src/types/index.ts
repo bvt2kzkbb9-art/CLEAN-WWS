@@ -23,24 +23,3 @@ export interface Event {
   date: Date
   creator: string
 }
-
-// Post types
-export interface Post {
-  id: string
-  content: string
-  image?: string
-  creator: string
-  likes: number
-  comments: number
-  createdAt: Date
-}
-
-// Message types
-export interface Message {
-  id: string
-  senderId: string
-  receiverId: string
-  content: string
-  createdAt: Date
-  read: boolean
-}

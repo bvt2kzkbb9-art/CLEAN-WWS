@@ -15,7 +15,7 @@ export function Navbar() {
       await logout()
       navigate('/login')
     } catch (error) {
-      console.error('Logout failed:', error)
+      // Error is handled by useAuthForm hook
     }
   }
 
