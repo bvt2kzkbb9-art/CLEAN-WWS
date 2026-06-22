@@ -86,6 +86,12 @@
 }
 
 /* Events Page */
+.cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .events-list {
   display: flex;
   flex-direction: column;
