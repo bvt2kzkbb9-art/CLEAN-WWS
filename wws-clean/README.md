@@ -1,57 +1,52 @@
-# 🎮 Weekend Warrior Social
+# Weekend Warrior Social
 
-**Polska PWA społeczna dla wojowników weekendu.**
+Modern social platform for organizing weekend activities and events.
 
-> Dołącz. Walcz. Zwyciężaj.
+## Architecture
 
----
+```
+src/
+├── components/      # Reusable UI components
+├── pages/           # Page components (routes)
+├── hooks/           # Custom React hooks
+├── services/        # Business logic services
+├── firebase/        # Firebase configuration & services
+├── cloudinary/      # Cloudinary configuration & services
+├── context/         # React Context providers
+├── assets/          # Images, icons, etc.
+└── types/           # TypeScript type definitions
+```
 
-## ⚡ Quick Start
+## Development
 
-👉 **[CZYTAJ SETUP.md](./SETUP.md)** — 5 minut do działającego projektu
+### Setup
+```bash
+npm install
+```
 
----
+### Development Server
+```bash
+npm run dev
+```
 
-## 📋 Dokumentacja
+### Build
+```bash
+npm run build
+```
 
-- **[SETUP.md](./SETUP.md)** — Instalacja & konfiguracja (START TU!)
-- **[DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)** — Wdrażanie do produkcji
-- **[PRODUCTION_READINESS_REPORT.md](./PRODUCTION_READINESS_REPORT.md)** — Status & checklist
+### Preview
+```bash
+npm run preview
+```
 
----
+## Project Stages
 
-## 🏗️ Tech Stack
-
-- **Frontend:** Vanilla JavaScript (ES Modules) + HTML/CSS
-- **Backend:** Firebase Auth + Firestore
-- **Images:** Cloudinary
-- **PWA:** Service Worker + Manifest
-- **Hosting:** Firebase / GitHub Pages
-
----
-
-## 🚀 Funkcjonalności
-
-✅ Firebase Auth (Email + Google OAuth)  
-✅ Social Feed (posty, komentarze, lajki)  
-✅ RPG Ranking System (Rookie → Legend)  
-✅ Challenge System (Misje)  
-✅ Direct Messaging  
-✅ Notifications  
-✅ User Profiles  
-✅ Offline Support (PWA)  
-✅ Mobile-First Design  
-
----
-
-## 🔐 Bezpieczeństwo
-
-- ✅ Firestore Security Rules
-- ✅ Firebase Config w zmiennych
-- ✅ Service Worker caching
-- ✅ HTTPS everywhere
-
----
-
-**Wersja:** Clean Build v15 (22.06.2026)  
-**Status:** ✅ Production Ready
+- **ETAP 2**: Architecture Setup ✓
+- **ETAP 3**: Configuration
+- **ETAP 4**: UI Design
+- **ETAP 5**: Card Component
+- **ETAP 6**: Graphics & Animations
+- **ETAP 7**: Firestore Models
+- **ETAP 8**: Authorization
+- **ETAP 9**: Social Features
+- **ETAP 10**: Testing
